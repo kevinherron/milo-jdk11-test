@@ -17,6 +17,8 @@ public class UnifiedAutomationExample {
   private static final Logger logger = LoggerFactory.getLogger(UnifiedAutomationExample.class);
 
   public static void main(String[] args) throws Exception {
+    logger.info("Java version: {}", System.getProperty("java.version"));
+
     OpcUaClient client = OpcUaClient.create(
         "opc.tcp://172.16.127.2:48010",
         endpoints ->
